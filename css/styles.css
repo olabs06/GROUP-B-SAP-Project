@@ -14,3 +14,32 @@
     color: darkblue;
   }
   
+=======
+form {
+    display:flex;
+    flex-direction: row;
+    margin: 20px 500px;
+    border:1px solid lightblue;
+    padding:2px;
+  }
+  
+  #searchID {
+    flex-grow: 1;
+    border:none;  
+  }
+
+  #searchID:focus{
+    outline: none;
+  }
+  
+  #submit {
+    border: none;
+    background: none;
+    color:black;
+  }
+
+  #submit:hover{
+    background:lightblue;
+    color:black;
+  }
+
