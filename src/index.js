@@ -1,3 +1,6 @@
+function myFunction(like) {
+    like.classList.toggle("fa-thumbs-down");
+}
 const initialize = () => {
     search = document.querySelector('#searchID')
     form = document.querySelector('#searchFormID')

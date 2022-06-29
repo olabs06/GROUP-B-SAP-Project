@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>SAP Blog Project</title>
-    <script defer type="text/javascript" src="./src/index.js"></script>
+    <title>afroDev</title>
 </head>
 <body>
     <header>
-        <a href = "index.html" class="logo">afroDev</a>
+        <a href = "index.html" id="logo">afroDev</a>
         <form id="searchFormID">   
             <input type="text" id="searchID" name="search" placeholder="Search for a keyword...">
             <input type="submit" value="search now" id="submit">
@@ -23,20 +23,58 @@
         <aside id="left_section">
             <div id="left_div1">
                 <h4>We are a community of 128,236 African developers</h4>
-                <p>We're a place where coders share, stay up-to-date and grow their careers.</p>
+                <p class="left_subtext">We're a place where coders share, stay up-to-date and grow their careers.</p>
                 <a href="#create_account">Create account</a>
                 <a href="#login">Log in</a>
             </div>
             <div id="left_div2">
-                <div class="home">
-                   <img src="./asset/FrameHome_icon.png" alt="#home">
-                   <p>Home</p> 
-                </div>
+                <ul class="left_div2_items">
+                   <li><img src="./asset/FrameHome_icon.png" alt="#home"><a href="#home">Home</a></li>
+                   <li><img src="./asset/FrameList_icon.png" alt="#list"><a href="#list">Listings</a></li>
+                   <li><img src="./asset/FramePodacst_icons.png" alt="#list"><a href="#podcast">Podcasts</a></li>
+                   <li><img src="./asset/FrameVideo_icon.png" alt="#list"><a href="#video">Video</a></li>
+                   <li><img src="./asset/FrameTag.png" alt="#tag"><a href="#tag">Tags</a></li>
+                   <li><img src="./asset/FrameFAQ icons.png" alt="#faq"><a href="#faq">FAQ</a></li>
+                   <li><img src="./asset/FrameSponsors_icon.png" alt="#sponsor"><a href="#sponsor">Sponsor</a></li>
+                   <li><img src="./asset/FrameDev_icon.png" alt="#about"><a href="#about">About</a></li>
+                   <li><img src="./asset/FrameContact_icon.png" alt="#contact"><a href="#contact">Contact</a></li>
+                   <li><img src="./asset/FrameGuide_icon.png" alt="#guide"><a href="#guide">Guide</a></li> 
+                </ul>
+            </div>
+            <div id="left_div3">
+                <ul class="left_div3_items">
+                    <li><img src="./asset/FrameCode of conduct.png" alt="#code"><a href="#code">Code of Conduct</a></li>
+                    <li><img src="./asset/FramePrivacy_policy.png" alt="#privacy"><a href="#privacy">Privacy Policy</a></li>
+                    <li><img src="./asset/FrameTerms of use.png" alt="#terms"><a href="#terms">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div id="left_div4">
+                <ul class="left_div4_items">
+                    <li><a href="http://twitter.com" class="fa fa-twitter"></a></li>
+                    <li><a href="http://facebook.com" class="fa fa-facebook-official"></a></li>
+                    <li><a href="http://github.com" class="fa fa-github"></a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Popular Tags</h3>
+                <p>#webdev</p>
+                <p>#javascript</p>
             </div>
         </aside>
-        <section id="center_section"></section>
+        <section id="center_section">
+            <div>
+                <ul>
+                    <li>
+                        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+                    </li>
+                </ul>
+            </div>
+        </section>
         <aside id="right_section"></aside>
     </main>
+ 
     <footer></footer>
+    <script src="./src/index.js"></script>
+    
 </body>
 </html>
