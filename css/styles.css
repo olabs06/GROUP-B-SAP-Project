@@ -3,6 +3,12 @@ body {
   background-color: whitesmoke;
 }
 
+header, main{
+  display:flex;
+  flex-direction: row;
+  margin: 10px 150px;
+}
+
 form {
   display:flex;
   flex-direction: row;
@@ -12,14 +18,24 @@ form {
   border-radius: 10px;
 }
 
+aside div{
+  background-color: white;
+  padding: 10px;
+  margin: 15px;
+  
+  border-radius: 10px;
+}
+
 #container {
-  margin:20px 300px;
+  margin:20px 20px 20px 20px;
   background-color: white;
   padding: 1px;
+  width: auto;
 }
 
 .feedText {
   padding: 10px;
+  
 }
 
 .feedImg {
