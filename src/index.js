@@ -1,3 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("Document Loaded")
-})
+
+function myFunction(like) {
+    like.classList.toggle("fa-thumbs-down");
+  }
+
