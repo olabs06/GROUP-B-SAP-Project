@@ -1,3 +1,6 @@
+function myFunction(like) {
+    like.classList.toggle("fa-thumbs-down");
+}
 const initialize = () => {
     fetch('https://techcrunch.com/wp-json/wp/v2/posts?per_page=100&context=embed')
     .then(response => response.json())

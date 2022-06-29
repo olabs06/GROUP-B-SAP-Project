@@ -1,3 +1,4 @@
+
 body {
   background-color: whitesmoke;
 }
@@ -57,3 +58,15 @@ form {
   background:lightblue;
   color:black;
 }
+
+.fa {
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+
