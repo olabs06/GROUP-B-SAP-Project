@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>SAP Blog Project</title>
+    <script defer type="text/javascript" src="./src/index.js"></script>
 </head>
 <body>
+    <header>
+        <form id="searchFormID">   
+            <input type="text" id="searchID" name="search" placeholder="Search for a keyword...">
+            <input type="submit" value="search now" id="submit">
+        </form>
+    </header>
+    
     <h1>Hello Team!</h1>
     <p>Happy Coding!</p>
-    <script src="index.js"></script>
+    <div id="refresh"></div>
+    
 </body>
 </html>
