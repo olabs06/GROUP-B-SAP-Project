@@ -4,77 +4,200 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>afroDev</title>
 </head>
 <body>
     <header>
-        <a href = "index.html" id="logo">afroDev</a>
-        <form id="searchFormID">   
-            <input type="text" id="searchID" name="search" placeholder="Search for a keyword...">
-            <input type="submit" value="search now" id="submit">
-        </form>
-        <a href="#login">Log in</a>
-        <a href="#create_account">Create account</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">afroDev</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <form id="searchFormID" class="d-flex">
+                <input id="searchID" class="form-control me-2" type="search" placeholder="Search for a keyword..." aria-label="Search">
+                <button id= "submit" class="btn btn-outline-success fa fa-search" type="submit"></button>
+              </form>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Create Account</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
     <main>
         <div id="refresh"></div>
-        <aside id="left_section">
-            <div id="left_div1">
-                <h4>We are a community of 128,236 African developers</h4>
-                <p class="left_subtext">We're a place where coders share, stay up-to-date and grow their careers.</p>
-                <a href="#create_account">Create account</a>
-                <a href="#login">Log in</a>
+        <div class="container">
+            <div class="row">
+                <div id="left_section" class="col">
+                    <div id="left_div1">
+                        <h4>We are a community of 128,236 African developers</h4>
+                        <p class="left_subtext">We're a place where coders share, stay up-to-date and grow their careers.</p>
+                        <a href="#create_account">Create account</a>
+                        <a href="#login">Log in</a>
+                    </div>
+                    <div id="left_div2">
+                        <ul class="left_div2_items">
+                           <li><img src="./asset/FrameHome_icon.png" alt="#home"><a href="#home">Home</a></li>
+                           <li><img src="./asset/FrameList_icon.png" alt="#list"><a href="#list">Listings</a></li>
+                           <li><img src="./asset/FramePodacst_icons.png" alt="#list"><a href="#podcast">Podcasts</a></li>
+                           <li><img src="./asset/FrameVideo_icon.png" alt="#list"><a href="#video">Video</a></li>
+                           <li><img src="./asset/FrameTag.png" alt="#tag"><a href="#tag">Tags</a></li>
+                           <li><img src="./asset/FrameFAQ icons.png" alt="#faq"><a href="#faq">FAQ</a></li>
+                           <li><img src="./asset/FrameSponsors_icon.png" alt="#sponsor"><a href="#sponsor">Sponsor</a></li>
+                           <li><img src="./asset/FrameDev_icon.png" alt="#about"><a href="#about">About</a></li>
+                           <li><img src="./asset/FrameContact_icon.png" alt="#contact"><a href="#contact">Contact</a></li>
+                           <li><img src="./asset/FrameGuide_icon.png" alt="#guide"><a href="#guide">Guide</a></li> 
+                        </ul>
+                    </div>
+                    <div id="left_div3">
+                        <ul class="left_div3_items">
+                            <li><img src="./asset/FrameCode of conduct.png" alt="#code"><a href="#code">Code of Conduct</a></li>
+                            <li><img src="./asset/FramePrivacy_policy.png" alt="#privacy"><a href="#privacy">Privacy Policy</a></li>
+                            <li><img src="./asset/FrameTerms of use.png" alt="#terms"><a href="#terms">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                    <div id="left_div4">
+                        <ul class="left_div4_items">
+                            <li><a href="http://twitter.com" class="fa fa-twitter"></a></li>
+                            <li><a href="http://facebook.com" class="fa fa-facebook-official"></a></li>
+                            <li><a href="http://github.com" class="fa fa-github"></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Popular Tags</h3>
+                        <ul>
+                            <li><a>#webdev</a></li>
+                            <li><a>#javascript</a></li>
+                            <li><a>#html</a></li>
+                            <li><a>#css</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="center_section" class="col">
+                    <div id="hero">
+                        <div class="hero_text">
+                            <h1>We curate relevant content for African Developers</h1>
+                            <p>Get up-to-date news about the tech ecosystem in Africa. We provide the most recent information about people and technologies in Africa</p>
+                            <button><a href="#create_account">Create account</a></button>
+                            <button><a href="#login">Log in</a></button>
+                        </div>
+                        <div>
+                            <img src="./asset/3D Illustration-Product Development-Skin-01 1Hero_image.png" alt="hero_image">
+                        </div>  
+                    </div>
+                        <div>
+                            <ul id="center_section_item1">
+                                <li><a>Relevant</a></li>
+                                <li><a>Latest</a></li>
+                                <li><a>Top</a></li>
+                            </ul>
+                        </div>
+                    <div id="center_section_item2" class="col">
+                        <div id="center_section_subitems" class="row">
+                            <div id="feed" class="row">
+                                <img src="./asset/bxs_userUser_avatar.png" alt="avatar">
+                                <p id="author" class="author">User name</p>
+                                <p id="date" class="date">Jan 01</p>
+                            </div>
+                            <div class="row">
+                                <h3 id="title">Article title</h3>
+                            </div>
+                            <div id="hashtag" class="row">
+                                <ul>
+                                    <li><a>javascript</a></li>
+                                    <li><a>html</a></li>
+                                    <li><a>css</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <ul class="row reactions">
+                                    <li class="liker">
+                                        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i><p id="likes-count">10</p><p class="likes">likes</p>
+                                    </li>
+                                    <li class="commenter">
+                                        <i onclick="" class="fa fa-comment-o"></i><p>Add Comment</p>
+                                    </li>
+                                    <li class="minutes-counter">
+                                        <p id="minutes">5mins read</p>
+                                    </li>
+                                    <li>
+                                        <button class="btn">Save</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div id="right_section" class="col">
+                    <div class=" row advert">
+                        <img src="./asset/RectangleMoringa.png" alt="moringa">
+                    </div>
+                    <div class="row top_right_items1">
+                        <div class="listings">
+                            <h6>Listings</h6>
+                            <p class="btn">See all</p>
+                        </div>
+                        <div class="listings_text">
+                            <p>Check Out Our Youtube Channel For Free Python Course and More</p>
+                            <p><a href="#education">education</a></p>
+                        </div>
+                        <div class="listings_text">
+                            <p>Vanilla JS Icon Picker (Github Open source)</p>
+                            <p><a href="#products">products</a></p>
+                        </div>
+                        <div class="listings_text">
+                            <p>Nigerian news, Job Listing and entertainment website</p>
+                            <p><a href="#jobs">jobs</a></p>
+                        </div>
+                        <div class="create_listings">
+                            <p><a href="create_a_list">Create a Listing</a></p>
+                        </div>
+                    </div>
+                    <div class="row top_right_items2">
+                        <div>
+                            <h6><a href="#discuss">#discuss</a></h6>
+                        </div>
+                        <div class="discuss1">
+                            <p class="discuss_title">Meme Monday!</p>
+                            <p class="comments_count">21 comments</p>
+                        </div>
+                        <div class="discuss2">
+                            <p class="discuss_title">What Website Would You Like to Create a New UI For?</p>
+                            <p class="comments_count">5 comments</p>
+                        </div>
+                        <div class="discuss1">
+                            <p class="discuss_title">How do I improve as a software developer ?</p>
+                            <p class="comments_count">33 comments</p>
+                        </div>
+                    </div>
+        
+                </div>
             </div>
-            <div id="left_div2">
-                <ul class="left_div2_items">
-                   <li><img src="./asset/FrameHome_icon.png" alt="#home"><a href="#home">Home</a></li>
-                   <li><img src="./asset/FrameList_icon.png" alt="#list"><a href="#list">Listings</a></li>
-                   <li><img src="./asset/FramePodacst_icons.png" alt="#list"><a href="#podcast">Podcasts</a></li>
-                   <li><img src="./asset/FrameVideo_icon.png" alt="#list"><a href="#video">Video</a></li>
-                   <li><img src="./asset/FrameTag.png" alt="#tag"><a href="#tag">Tags</a></li>
-                   <li><img src="./asset/FrameFAQ icons.png" alt="#faq"><a href="#faq">FAQ</a></li>
-                   <li><img src="./asset/FrameSponsors_icon.png" alt="#sponsor"><a href="#sponsor">Sponsor</a></li>
-                   <li><img src="./asset/FrameDev_icon.png" alt="#about"><a href="#about">About</a></li>
-                   <li><img src="./asset/FrameContact_icon.png" alt="#contact"><a href="#contact">Contact</a></li>
-                   <li><img src="./asset/FrameGuide_icon.png" alt="#guide"><a href="#guide">Guide</a></li> 
-                </ul>
-            </div>
-            <div id="left_div3">
-                <ul class="left_div3_items">
-                    <li><img src="./asset/FrameCode of conduct.png" alt="#code"><a href="#code">Code of Conduct</a></li>
-                    <li><img src="./asset/FramePrivacy_policy.png" alt="#privacy"><a href="#privacy">Privacy Policy</a></li>
-                    <li><img src="./asset/FrameTerms of use.png" alt="#terms"><a href="#terms">Terms of Use</a></li>
-                </ul>
-            </div>
-            <div id="left_div4">
-                <ul class="left_div4_items">
-                    <li><a href="http://twitter.com" class="fa fa-twitter"></a></li>
-                    <li><a href="http://facebook.com" class="fa fa-facebook-official"></a></li>
-                    <li><a href="http://github.com" class="fa fa-github"></a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Popular Tags</h3>
-                <p>#webdev</p>
-                <p>#javascript</p>
-            </div>
-        </aside>
-        <section id="center_section">
-            <div>
-                <ul>
-                    <li>
-                        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <aside id="right_section"></aside>
+        </div>
     </main>
  
-    <footer></footer>
+    <footer class="col">
+        <div class="row">
+            <div class="copyright"><p>&copy;2022 afroDev</p></div>
+            <div class="extras">
+                <p><a href="#Terms">Terms of Use</a></p>
+                <p><a href="#Policy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
     <script src="./src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     
 </body>
 </html>
