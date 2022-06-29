@@ -1,3 +1,20 @@
+*{
+    margin: 10px;
+    padding: 5px;
+}
+
+
+  .fa {
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .fa:hover {
+    color: darkblue;
+  }
+  
+=======
 form {
     display:flex;
     flex-direction: row;
@@ -25,3 +42,4 @@ form {
     background:lightblue;
     color:black;
   }
+
