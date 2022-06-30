@@ -122,8 +122,6 @@ form {
   text-align: right;
 }
 
-
-
 button {
   background-color: #cc14ddd4;
   padding: 15px 32px;
@@ -133,15 +131,11 @@ button {
   border: none;
 }
 
-
-
 main{
   display:flex;
   flex-direction: row;
   margin: 10px 150px;
 }
-
-
 
 #container {
   margin:20px 20px 20px 20px;
