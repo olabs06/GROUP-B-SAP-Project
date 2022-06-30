@@ -84,7 +84,7 @@ const initialize = () => {
                 const array = datum["title"].rendered.split(' ')
                 array.filter(item => {
                     if (item.toUpperCase() === search.value.toUpperCase()){
-                        return  title.innerHTML = array.join(' ')
+                        return  title.innerHTML = `<a href="${datum["link"]}">${array.join(' ')}</a>`
                     }})        
             });
         })
