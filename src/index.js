@@ -1,46 +1,12 @@
-
-window.addEventListener('load', () =>{
-    //commentList ul to content the comments in form of list
-    let commentList = document.getElementById("comment-list");
-    //A form where the comment can be added
-    let form = document.getElementById("comment-form");
-    //Input in the form to hold the comment
-    let text = document.getElementById("replyID");
-    
-    form.addEventListener('submit', function(e) {   
-        e.preventDefault();
-        let comment =text.value;
-        if(!comment){
-            alert('Please Enter Your Comment');
-            return;
-        }
-        //CommentElement is to hold individual comment 
-        let commentElement = document.createElement('li');
-        
-        commentElement.innerText = comment;
-        commentList.appendChild(commentElement);
-        //This is to remove a comment when that comment is clicked on
-        commentElement.addEventListener('click', ()=>{
-            commentList.removeChild(commentElement);
-        })
-    });
-})    
-
-
-              
-
-
-   
-    
-    
-
-
-
-
 function myFunction(like) {
     like.classList.toggle("fa-thumbs-down");
 }
 const initialize = () => {
+    container = document.querySelector('#container')
+    search = document.querySelector('#searchID')
+    form = document.querySelector('#searchFormID')
+    p = document.querySelector('p')
+
     fetch('https://techcrunch.com/wp-json/wp/v2/posts?per_page=100&context=embed')
     .then(response => response.json())
     .then((data) => {
@@ -84,7 +50,7 @@ const initialize = () => {
                 const array = datum["title"].rendered.split(' ')
                 array.filter(item => {
                     if (item.toUpperCase() === search.value.toUpperCase()){
-                        return  title.innerHTML = array.join(' ')
+                        return  title.innerHTML = `<a href="${datum["link"]}">${array.join(' ')}</a>`
                     }})        
             });
         })
@@ -95,10 +61,6 @@ const initialize = () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    container = document.querySelector('#container')
-    search = document.querySelector('#searchID')
-    form = document.querySelector('#searchFormID')
-    p = document.querySelector('p')
     console.log("Document Loaded")
     initialize()
 })
