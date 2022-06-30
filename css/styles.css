@@ -6,7 +6,7 @@ body {
 header, main{
   display:flex;
   flex-direction: row;
- 
+  margin: 10px 150px;
 }
 
 form {
@@ -18,7 +18,7 @@ form {
   border-radius: 10px;
 }
 
-#left-section, #right-section {
+aside div{
   background-color: white;
   padding: 10px;
   margin: 15px;
@@ -64,7 +64,16 @@ form {
   outline: none;
 }
 
+#submit {
+  border: none;
+  background: none;
+  color:black;
+}
 
+#submit:hover{
+  background:lightblue;
+  color:black;
+}
 
 .fa {
   font-size: 20px;
