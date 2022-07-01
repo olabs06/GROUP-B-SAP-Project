@@ -75,11 +75,11 @@ const initialize = () => {
         fetch('https://techcrunch.com/wp-json/wp/v2/posts?per_page=100&context=embed')
         .then(response => response.json())
         .then((data) => {
-            container.innerHTML = ''
+            api_blog_post.innerHTML = ''
             data.forEach(datum => {
                 title = document.createElement('h3')
                 titleDiv = document.createElement('div')
-                container.append(titleDiv)
+                api_blog_post.append(titleDiv)
                 titleDiv.append(title)
                 const array = datum["title"].rendered.split(' ')
                 array.filter(item => {
@@ -95,7 +95,7 @@ const initialize = () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    container = document.querySelector('#container')
+    container = document.querySelector('#api_blog_post')
     search = document.querySelector('#searchID')
     form = document.querySelector('#searchFormID')
     p = document.querySelector('p')
