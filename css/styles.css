@@ -123,7 +123,7 @@ form {
 }
 
 button {
-  background-color: #cc14ddd4;
+  background-color: transparent;
   padding: 15px 32px;
   text-decoration: none;
   display: inline-block;
@@ -135,13 +135,6 @@ main{
   display:flex;
   flex-direction: row;
   margin: 10px 150px;
-}
-
-#container {
-  margin:20px 20px 20px 20px;
-  background-color: white;
-  padding: 1px;
-  width: auto;
 }
 
 ol, ul {
