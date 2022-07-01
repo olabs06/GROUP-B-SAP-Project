@@ -39,3 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Document Loaded")
     initialize()
 })
+
+
+function myClick() {
+        alert("Your comment was submitted");
+  }
+}
