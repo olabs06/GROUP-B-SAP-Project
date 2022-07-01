@@ -1,5 +1,5 @@
 
-window.addEventListener('load', () =>{
+/*window.addEventListener('load', () =>{
     //commentList ul to content the comments in form of list
     let commentList = document.getElementById("comment-list");
     //A form where the comment can be added
@@ -24,38 +24,50 @@ window.addEventListener('load', () =>{
             commentList.removeChild(commentElement);
         })
     });
-})    
-
-
-              
-
-
-   
-    
-    
-
-
-
+}) 
 
 function myFunction(like) {
-    like.classList.toggle("fa-thumbs-down");
-}
+    console.log(like)
+    like.classList.toggle("fa-thumbs-down")
+}*/
+
 const initialize = () => {
     fetch('https://techcrunch.com/wp-json/wp/v2/posts?per_page=100&context=embed')
     .then(response => response.json())
     .then((data) => {
         data.forEach((datum) => {
+            const commentArray = []
+            const commentListArray = []
+
             feedTitle = document.createElement('h2')
             preview = document.createElement('h4')
             feed = document.createElement('div')
             feedText = document.createElement('div')
             img = document.createElement('img')
             a = document.createElement('a')
+            comment = document.createElement('input')
+            commentSubmit = document.createElement('input')
+            commentForm = document.createElement('form')
+            commentList = document.createElement("div")
 
+            commentForm.append(comment, commentSubmit)   
             container.append(feed)
             a.append(feedTitle)
             feedText.append(a,preview)
-            feed.append(img,feedText)
+            feed.append(img,feedText,commentList,commentForm)
+
+            commentSubmit.type = 'submit'
+            commentSubmit.className = 'btn btn-outline-success fa fa-search'
+            commentSubmit.value ='send'
+            commentForm.className = 'd-flex'
+            comment.className = 'form-control me-2'
+
+            commentForm.id = `${data.indexOf(datum)}`
+            comment.id = `${data.indexOf(datum)}`
+            
+            feed.id = `${data.indexOf(datum)}`
+            commentArray.push(commentForm)
+            
 
             img.className = 'feedImg'
             feed.className = 'feed'
@@ -65,10 +77,48 @@ const initialize = () => {
             a.href = datum["link"]
             preview.innerHTML = datum["excerpt"].rendered
 
+            commentArray.forEach(element => {
+                element.addEventListener('submit', function(e) {   
+                    e.preventDefault();
+                    console.log(element.id)
+                    userComment = element[0]
+                    parent = element.parentNode
+                    console.log(parent)
+                    
+                    if(userComment.value === ''){
+                        alert('Please Enter Your Comment');
+                    }else{
+                        commentList.innerHTML = ''                   
+                        commentElement = document.createElement('p');
+                        commentElement.innerText = userComment.value;
+
+                        commentElement.id = `${data.indexOf(datum)}`
+                        commentList.id = `${data.indexOf(datum)}`
+
+                        commentList.append(commentElement)
+                        parent.append(commentList);
+
+                        /*commentListArray.push(commentElement)
+
+                        for (comments of commentListArray){
+                            if (comments.id !== parent.id){
+                                commentListArray.shift()
+                            }else{
+                                commentList.append(comments)
+                                parent.append(commentList);
+
+                                console.log(commentListArray)
+                            }
+                        }*/
+                        
+                        
+                    }
+                });
+            })
+
         })
     })
     .catch(e => console.log(e.message))
-
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
