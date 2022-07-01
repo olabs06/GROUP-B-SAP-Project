@@ -40,7 +40,7 @@ const initialize = () => {
             const commentListArray = []
 
             feedTitle = document.createElement('h2')
-            preview = document.createElement('h4')
+            preview = document.createElement('p')
             feed = document.createElement('div')
             feedText = document.createElement('div')
             img = document.createElement('img')
@@ -57,10 +57,12 @@ const initialize = () => {
             feed.append(img,feedText,commentList,commentForm)
 
             commentSubmit.type = 'submit'
-            commentSubmit.className = 'btn btn-outline-success fa fa-search'
+            commentSubmit.className = 'btn btn-outline-primary'
             commentSubmit.value ='send'
-            commentForm.className = 'd-flex'
+            commentForm.className = 's-flex'
             comment.className = 'form-control me-2'
+            comment.placeholder = 'Comment here...'
+            preview.className = 'preview'
 
             commentForm.id = `${data.indexOf(datum)}`
             comment.id = `${data.indexOf(datum)}`

@@ -7,6 +7,14 @@ body {
   background-color: whitesmoke;
 }
 
+.row {
+  --bs-gutter-x: 0.8rem;
+}
+
+.hero {
+  background-color: #ffffff;
+}
+
 header{
   width: 100%;
 }
@@ -22,12 +30,13 @@ header{
 }
 form{
   margin-right: 20%;
+  margin-left: 5%;
 }
  #searchID {
   padding: 10px;
   border-style: none;
   box-shadow: 5px 5px 10px #888888;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 #submit {
@@ -56,6 +65,15 @@ form{
 main{
   /* display: flex;
   background-color: #FFFFFF; */
+}
+
+.s-flex {
+  display: flex;
+  flex-direction: row;
+  margin-right: 0;
+  width: 100%;
+  border-radius: 25px;
+
 }
 
 .container {
@@ -90,18 +108,23 @@ main{
   font-size: 1.2rem !important;
 
 }
+
+#h4 {
+  text-shadow: 1px 1px #888888;
+}
+
 #api_blog_post{
   display: flex;
   flex-direction: column;
   width: 100%;
-    text-align: justify;
+  text-align: justify;
 }
 #api_blog_post .feed{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 10% auto;
+  margin: 1% auto;
   background-color: #ffffff;
   box-shadow: 5px 10px 8px #888888;
   border-radius: 15px;
@@ -111,17 +134,22 @@ main{
   max-width: 100%;
   margin: 3% 0;
 }
-/* #api_blog_post .feed .feedText{
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: normal;
 
-} */
+ .preview p {
+  white-space: nowrap; 
+  width: 500px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+} 
+
 #api_blog_post .feed .feedText a{
-  text-decoration: none;
+  text-decoration: wavy;
   color: inherit;
   margin: 2px 0;
   font-size: 12px !important;
+  
 }
 /* #api_blog_post .feed .feedText h4{
 
