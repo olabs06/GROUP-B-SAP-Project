@@ -1,2 +1,2 @@
 # GROUP-B-SAP-Project
-AFRODEV is a tech blog that fetches data from tech crunch with some addon features
+AFRODEV is a tech blog that fetches data using techcrunch API with some addon features.
